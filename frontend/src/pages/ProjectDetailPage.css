@@ -1,0 +1,48 @@
+.project-detail-page {
+  padding: 24px;
+}
+
+.project-detail-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.project-detail-page .header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.project-detail-page .project-info-card {
+  margin-bottom: 24px;
+}
+
+.project-detail-page .tunnels-card {
+  min-height: 200px;
+}
+
+.project-detail-page .loading-container,
+.project-detail-page .error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page {
+    padding: 16px;
+  }
+
+  .project-detail-page .page-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .project-detail-page .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

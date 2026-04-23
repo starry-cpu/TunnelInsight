@@ -1,0 +1,123 @@
+.tunnel-detail-page {
+  padding: 24px;
+}
+
+.tunnel-detail-loading,
+.tunnel-detail-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 24px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.info-card,
+.stats-card,
+.locations-card,
+.history-card {
+  margin-bottom: 24px;
+}
+
+.stats-card .ant-statistic {
+  text-align: center;
+}
+
+.type-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.location-card {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.location-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.location-name {
+  color: #1890ff;
+}
+
+.location-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.location-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.analysis-result-card {
+  margin-top: 16px;
+  background: #fafafa;
+}
+
+.result-meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.result-content {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .analysis-result-card {
+  background: #1f1f1f;
+}
+
+[data-theme='dark'] .result-meta,
+[data-theme='dark'] .location-stats {
+  color: #aaa;
+}
+
+[data-theme='dark'] .location-time {
+  color: #888;
+}

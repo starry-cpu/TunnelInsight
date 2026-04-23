@@ -1,0 +1,111 @@
+.tunnel-selector-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tunnel-selector-loading p {
+  margin-top: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.tunnel-selector-empty {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tunnel-selector-empty .empty-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.tunnel-selector-empty .empty-description {
+  font-size: 14px;
+  color: #999;
+}
+
+.tunnel-selector {
+  width: 100%;
+}
+
+.tunnel-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.tunnel-radio-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tunnel-radio-item:hover {
+  border-color: #1890ff;
+  background-color: #f0f7ff;
+}
+
+.tunnel-radio-item.ant-radio-wrapper-checked {
+  border-color: #1890ff;
+  background-color: #e6f4ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+}
+
+.tunnel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.tunnel-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.tunnel-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #666;
+}
+
+.tunnel-location,
+.tunnel-defects {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tunnel-defects {
+  color: #ff9800;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .tunnel-radio-item {
+    padding: 10px 12px;
+  }
+
+  .tunnel-name {
+    font-size: 14px;
+  }
+
+  .tunnel-meta {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+  }
+}

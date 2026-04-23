@@ -1,0 +1,58 @@
+.repair-suggestion-card {
+  margin-top: 16px;
+  border-radius: 8px;
+}
+
+.repair-suggestion-card .ant-card-head-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.repair-suggestion-card .suggestion-text {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.repair-suggestion-card .sources-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.repair-suggestion-card .source-item {
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.repair-suggestion-card .suggestion-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.repair-suggestion-card .confidence {
+  display: flex;
+  align-items: center;
+}
+
+.repair-suggestion-card .query-time {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* 暗色主题 */
+.dark .repair-suggestion-card .suggestion-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark .repair-suggestion-card .sources-section,
+.dark .repair-suggestion-card .suggestion-meta {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}

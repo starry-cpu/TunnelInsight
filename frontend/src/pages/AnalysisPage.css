@@ -1,0 +1,126 @@
+.analysis-page {
+  padding: var(--spacing-lg);
+}
+
+.page-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+  flex: 1;
+}
+
+.page-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.analysis-content {
+  gap: var(--spacing-lg);
+}
+
+/* 🔥 强制左右布局 - 最高优先级 */
+.analysis-content.ant-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+}
+
+.analysis-content.ant-row > .ant-col {
+  display: block !important;
+  float: left !important;
+}
+
+/* 桌面端 (≥992px): 左侧 33.33%, 右侧 66.67% */
+@media screen and (min-width: 992px) {
+  .analysis-content.ant-row > .ant-col:first-child {
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
+    flex: none !important;
+  }
+
+  .analysis-content.ant-row > .ant-col:last-child {
+    width: 66.666667% !important;
+    max-width: 66.666667% !important;
+    flex: none !important;
+  }
+}
+
+/* 平板端 (768px - 991px): 左侧 41.67%, 右侧 58.33% */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .analysis-content.ant-row > .ant-col:first-child {
+    width: 41.666667% !important;
+    max-width: 41.666667% !important;
+    flex: none !important;
+  }
+
+  .analysis-content.ant-row > .ant-col:last-child {
+    width: 58.333333% !important;
+    max-width: 58.333333% !important;
+    flex: none !important;
+  }
+}
+
+/* 移动端 (<768px): 上下布局 */
+@media screen and (max-width: 767px) {
+  .analysis-content.ant-row {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+  }
+
+  .analysis-content.ant-row > .ant-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+  }
+}
+
+.upload-card,
+.tunnel-card,
+.action-card {
+  margin-bottom: var(--spacing-lg);
+}
+
+.upload-card .ant-card-head,
+.tunnel-card .ant-card-head,
+.result-card .ant-card-head {
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.upload-card .ant-card-head-title,
+.tunnel-card .ant-card-head-title,
+.result-card .ant-card-head-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.action-card .ant-card-body {
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .analysis-page {
+    padding: var(--spacing-md);
+  }
+
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .upload-card,
+  .tunnel-card,
+  .result-card {
+    margin-bottom: var(--spacing-md);
+  }
+}

@@ -1,0 +1,105 @@
+.history-detail-drawer .ant-drawer-body {
+  padding: var(--spacing-lg);
+}
+
+.detail-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.detail-section h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header h3 {
+  margin-bottom: 0;
+}
+
+.result-content {
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.result-content h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.result-content h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.result-content p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.result-content ul,
+.result-content ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.result-content li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* RAG 引用来源 */
+.rag-sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.rag-sources-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-right: var(--spacing-xs);
+}
+
+.rag-source-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--color-primary-bg, #e6f4ff);
+  color: var(--color-primary, #1890ff);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+/* RAG 元信息 */
+.rag-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.rag-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}

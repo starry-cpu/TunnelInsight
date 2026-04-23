@@ -1,0 +1,10 @@
+.project-selector-loading {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.empty-project-hint {
+  padding: 16px;
+  text-align: center;
+}

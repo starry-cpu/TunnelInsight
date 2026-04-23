@@ -1,0 +1,160 @@
+/* Loading State */
+.analysis-result-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-md);
+}
+
+.loading-text {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.loading-hint {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* Empty State */
+.analysis-result-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: var(--spacing-xl);
+}
+
+/* Result Container */
+.analysis-result {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+}
+
+/* Result Header - 操作栏 */
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 弹性空间 - 推开左右两侧 */
+.header-spacer {
+  flex: 1;
+}
+
+/* 操作按钮组 */
+.result-actions {
+  margin-left: auto;
+}
+
+/* Content - 内容区域 */
+.result-content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Markdown Styles */
+.markdown-content {
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.markdown-content h1.md-h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.markdown-content h2.md-h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.markdown-content h3.md-h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.markdown-content p.md-p {
+  margin-bottom: var(--spacing-md);
+}
+
+.markdown-content ul.md-ul,
+.markdown-content ol.md-ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+.markdown-content li.md-li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.markdown-content strong.md-strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.markdown-content code.md-inline-code {
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--status-danger);
+}
+
+.markdown-content code.md-code-block {
+  display: block;
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+  font-family: 'Courier New', monospace;
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}
+
+.markdown-content .md-table-wrapper {
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-content th,
+.markdown-content td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.markdown-content th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+}

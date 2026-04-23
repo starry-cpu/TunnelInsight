@@ -1,0 +1,86 @@
+.settings-card {
+  margin-bottom: var(--spacing-md);
+}
+
+.setting-section {
+  width: 100%;
+}
+
+.setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.setting-items {
+  padding-left: var(--spacing-lg);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.setting-item .ant-switch {
+  margin-left: var(--spacing-md);
+}
+
+/* Account Profile */
+.account-profile {
+  width: 100%;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg) 0;
+}
+
+/* Security Items */
+.security-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.security-info {
+  flex: 1;
+}
+
+.security-info .ant-typography {
+  margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .setting-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .setting-item .ant-switch {
+    margin-left: 0;
+  }
+
+  .security-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .security-item .ant-btn {
+    width: 100%;
+  }
+}

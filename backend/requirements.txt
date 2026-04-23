@@ -1,0 +1,101 @@
+# TunnelInsight Backend Dependencies
+# Groups:
+# - Core: API framework and server
+# - Database: DB connection and migrations
+# - Validation: Data validation
+# - Auth: Authentication and security
+# - Utils: Utility libraries
+# - AI/ML: AI model inference (loose constraints for AutoDL compatibility)
+# - Dev: Development and testing tools
+
+# -----------------------------------------------------------------------------
+# Core - API Framework
+# NOTE: fastapi 0.129.2+ includes starlette 0.47.2+ with security fixes
+# -----------------------------------------------------------------------------
+fastapi>=0.129.2
+uvicorn[standard]==0.34.0
+gunicorn==23.0.0
+
+# -----------------------------------------------------------------------------
+# Database
+# NOTE: aiomysql 0.3.0+ fixes CVE-2025-62611
+# NOTE: pymysql 1.1.1+ fixes CVE-2024-36039
+# NOTE: asyncpg used in tests (postgresql+asyncpg://) and utility scripts
+# NOTE: aiosqlite used in tests (sqlite+aiosqlite://) and alembic env.py
+# -----------------------------------------------------------------------------
+sqlalchemy==2.0.36
+aiomysql>=0.3.0
+pymysql>=1.1.1
+asyncpg>=0.29.0
+aiosqlite>=0.20.0
+alembic==1.14.0
+
+# -----------------------------------------------------------------------------
+# Validation
+# -----------------------------------------------------------------------------
+pydantic==2.10.4
+pydantic-settings>=2.7.1
+email-validator==2.3.0
+
+# -----------------------------------------------------------------------------
+# Auth - Authentication and Security
+# SECURITY WARNING: python-jose is unmaintained and has a transitive
+# dependency on ecdsa which has CVE-2024-23342 (no fix available).
+# TODO: Consider migrating to PyJWT or authlib in the future.
+# See: https://github.com/mpdavis/python-jose/issues/341
+# NOTE: passlib is no longer actively maintained and has compatibility issues
+# with bcrypt 4.1+. Pin bcrypt to 4.0.1 to avoid warnings.
+# NOTE: python-multipart 0.0.22+ fixes CVE-2026-24486
+# -----------------------------------------------------------------------------
+python-jose[cryptography]>=3.4.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart>=0.0.22
+
+# -----------------------------------------------------------------------------
+# Utils
+# -----------------------------------------------------------------------------
+python-dotenv==1.0.1
+aiofiles==24.1.0
+
+# -----------------------------------------------------------------------------
+# Email
+# -----------------------------------------------------------------------------
+aiosmtplib==3.0.2
+
+# -----------------------------------------------------------------------------
+# AI/ML - Model Inference
+# IMPORTANT: AutoDL pre-installs unsloth, xformers, trl which have strict
+# version requirements for torch/transformers. Use minimal constraints to
+# let pip resolver choose compatible versions.
+#
+# AutoDL pre-installed packages (as of 2026.02):
+# - xformers 0.0.35: requires torch>=2.10
+# - unsloth 2026.2.1: requires transformers>=4.51.3,<=4.57.6
+# - trl 0.24.0: requires transformers>=4.56.1
+# - torchvision 0.25.0: requires torch==2.10.0
+# NOTE: unsloth is required by app/services/ai_service.py (from unsloth import
+# FastVisionModel). It is pre-installed on AutoDL but must be listed here for
+# reproducibility on other environments. Install from PyPI or GitHub:
+#   pip install unsloth
+# NOTE: unsloth 2026.3.3+ supports transformers 5.x; old unsloth 2026.2.1
+# required transformers<=4.57.6. Updated upper bound accordingly.
+# -----------------------------------------------------------------------------
+torch>=2.10.0
+torchvision>=0.20.0
+transformers>=4.56.1
+peft>=0.10.0
+accelerate>=0.30.0
+Pillow>=10.0.0
+sentencepiece>=0.2.0
+unsloth>=2026.2.1
+
+# -----------------------------------------------------------------------------
+# Dev - Development and Testing (optional for production)
+# -----------------------------------------------------------------------------
+pytest==8.3.4
+pytest-asyncio>=0.24.0
+pytest-cov==6.0.0
+httpx==0.28.1
+ruff==0.8.4
+mypy==1.14.1
